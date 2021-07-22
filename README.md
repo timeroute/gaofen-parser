@@ -96,3 +96,4 @@ except Exception as e:
 
 - v0.1 目前仅支持读取高分系列卫星
 - v0.2 新增高景卫星处理类
+- v0.2.3 卫星处理类新增两个变量 image_name 和 xml_name
