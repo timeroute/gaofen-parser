@@ -1,5 +1,11 @@
 # 遥感卫星数据解析
 
+## 安装
+
+```shell
+pip install satellite-parser
+```
+
 ## 依赖
 
 xmltodict
