@@ -1,0 +1,121 @@
+RESOLUTION = {
+    'GF1': {
+        'PMS1': 2,
+        'PMS2': 2,
+        'WFV1': 16,
+        'WFV2': 16,
+        'WFV3': 16,
+        'WFV4': 16,
+    },
+    'GF2': {
+        'PMS1': 0.8,
+        'PMS2': 0.8,
+    },
+    'GF3': {
+        'SL': 1,
+        'UFS': 3,
+        'FSI': 5,
+        'FSII': 10,
+        'SS': 25,
+        'QPSI': 8,
+        'QPSII': 25,
+        'NSC': 50,
+        'WSC': 100,
+        'WAV': 10,
+        'GLO': 500,
+        'EXT': 25,
+    },
+    'GF4': {
+        'PMI': 50,
+        'IRS': 400,
+    },
+    'GF5': {
+        'AHSI': 30,
+        'VIMS': 20,
+        'DPC': None,
+    },
+    'GF6': {
+        'PMS': 2,
+        'WFV': 16,
+    },
+    'GF7': {
+        'LSA': None,
+        'BWD': 0.65,
+        'FWD': 0.8
+    },
+    'GF1B': {
+        'PMS': 2,
+    },
+    'GF1C': {
+        'PMS': 2,
+    },
+    'GF1D': {
+        'PMS': 2,
+    },
+    'SV1-01': {
+        'PAN': 0.5,
+        'MUX': 2,
+    },
+    'SV1-02': {
+        'PAN': 0.5,
+        'MUX': 2,
+    },
+    'SV1-03': {
+        'PAN': 0.5,
+        'MUX': 2,
+    },
+    'SV1-04': {
+        'PAN': 0.5,
+        'MUX': 2,
+    },
+}
+
+SATELLITE_ALIAS = {
+    'GF1': 'srq',
+    'GF2': 'srw',
+    'GF3': 'sre',
+    'GF4': 'srr',
+    'GF5': 'srt',
+    'GF6': 'sry',
+    'GF7': 'sru',
+    'GF1B': 'srb',
+    'GF1C': 'src',
+    'GF1D': 'srd',
+    'SV1-01': 'meo',
+    'SV1-02': 'mee',
+    'SV1-03': 'met',
+    'SV1-04': 'mef',
+    'UNKNOWN': 'nsp',
+}
+
+SENSOR_ALIAS = {
+    "AHSI": "quh",
+    "BWD": "qle",
+    "EXT": "vhu",
+    "FSI": "inj",
+    "FSII": "jsq",
+    "FWD": "rde",
+    "GLO": "0xP",
+    "IRS": "svt",
+    "LSA": "tfg",
+    "MUX": "bxv",
+    "NSC": "tnd",
+    "PAN": "cgf",
+    "PMI": "uej",
+    "PMS": "uet",
+    "PMS1": "utm",
+    "PMS2": "umg",
+    "QPSI": "tsq",
+    "QPSII": "tuk",
+    "SL": "c2w",
+    "SS": "u1m",
+    "UFS": "vzt",
+    "VIMS": "nuw",
+    "WAV": "v0f",
+    "WFV": "nzw",
+    "WFV1": "vmq",
+    "WFV2": "vwg",
+    "WFV3": "vmw",
+    "WFV4": "vna",
+    "WSC": "v1d",
+}
