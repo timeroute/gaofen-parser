@@ -21,24 +21,24 @@ class GF3Satellite(BaseSatellite):
         replaced_names = ['HH', 'VV', 'HV', 'VH', 'DH']
         if self.sensor_id in ['SL', 'UFS', 'FSI', 'FSII', 'SS', 'QPSI', 'QPSII', 'NSC', 'WSC', 'WAV', 'GLO', 'EXT']:
             base_names = self.base_name.split('_')
-            member_image_name = None
+            self.image_name = None
             for name in replaced_names:
                 base_names[8] = name
-                member_image_name = "{}.jpg".format('_'.join(base_names))
-                if member_image_name in self.names:
+                self.image_name = "{}.jpg".format('_'.join(base_names))
+                if self.image_name in self.names:
                     # 该文件存在压缩包里
                     break
-            if not member_image_name:
+            if not self.image_name:
                 print("图片文件不存在")
                 return
-            member_xml_name = "{}.meta.xml".format(self.base_name)
+            self.xml_name = "{}.meta.xml".format(self.base_name)
         else:
             print('预解析为空')
             return
-        member_image = tar.getmember(member_image_name)
+        member_image = tar.getmember(self.image_name)
         # image 为解压后的图片文件
         self.image = tar.extractfile(member_image)
-        member_xml = tar.getmember(member_xml_name)
+        member_xml = tar.getmember(self.xml_name)
         # data 为解压并解析后的字典数据
         self.data = self.xmltodict(
             tar.extractfile(member_xml).read())

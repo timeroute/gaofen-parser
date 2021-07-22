@@ -35,6 +35,8 @@ xmltodict
 
 - file_name 文件名
 - file_path 文件路径
+- image_name 图片文件名
+- xml_name xml文件名
 - ext 文件后缀名
 - satellite_id 星源 ID
 - sensor_id 传感器 ID
@@ -67,6 +69,8 @@ file_path = '/data/GF1_PMS1_E114.6_N22.7_20181006_L1A0003680028.tar.gz'
 try:
     satellite = GF1Satellite(file_name, file_path)
     print(satellite.meta)
+    print(satellite.image_name)
+    print(satellite.xml_name)
 except Exception as e:
     print(e)
 ```

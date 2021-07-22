@@ -24,15 +24,15 @@ class SV101Satellite(BaseSatellite):
                 self.sensor_id = added_name
                 self.resolution = self.get_resolution()
                 break
-        member_image_name = "{}/{}.jpg".format(
+        self.image_name = "{}/{}.jpg".format(
             self.base_name, self.tiff_base_name)
-        member_xml_name = "{}/{}.xml".format(self.base_name,
-                                             self.tiff_base_name)
+        self.xml_name = "{}/{}.xml".format(self.base_name,
+                                           self.tiff_base_name)
         # image 为解压后的图片文件
-        self.image = zip.open(member_image_name, 'r')
+        self.image = zip.open(self.image_name, 'r')
         # data 为解压并解析后的字典数据
         self.data = self.xmltodict(
-            zip.read(member_xml_name))
+            zip.read(self.xml_name))
         self.parse()
 
     def parse(self):

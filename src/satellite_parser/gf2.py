@@ -25,15 +25,15 @@ class GF2Satellite(BaseSatellite):
                 if not self.exists(added_name):
                     print("MSS 和 PAN 都不存在")
                     return
-            member_image_name = "{}-{}.jpg".format(self.base_name, added_name)
-            member_xml_name = "{}-{}.xml".format(self.base_name, added_name)
+            self.image_name = "{}-{}.jpg".format(self.base_name, added_name)
+            self.xml_name = "{}-{}.xml".format(self.base_name, added_name)
         else:
             print('Pre Parse None')
             return
-        member_image = tar.getmember(member_image_name)
+        member_image = tar.getmember(self.image_name)
         # image 为解压后的图片文件
         self.image = tar.extractfile(member_image)
-        member_xml = tar.getmember(member_xml_name)
+        member_xml = tar.getmember(self.xml_name)
         # data 为解压并解析后的字典数据
         self.data = self.xmltodict(
             tar.extractfile(member_xml).read())
