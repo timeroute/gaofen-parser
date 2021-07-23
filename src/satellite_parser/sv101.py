@@ -29,11 +29,10 @@ class SV101Satellite(BaseSatellite):
         self.xml_name = "{}/{}.xml".format(self.base_name,
                                            self.tiff_base_name)
         # image 为解压后的图片文件
-        self.image = zip.open(self.image_name, 'r')
+        self.image = zip.read(self.image_name)
         # data 为解压并解析后的字典数据
         self.data = self.xmltodict(
             zip.read(self.xml_name))
-        zip.close()
         self.parse()
 
     def parse(self):
