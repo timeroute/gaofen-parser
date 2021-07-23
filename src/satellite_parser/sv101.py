@@ -33,6 +33,7 @@ class SV101Satellite(BaseSatellite):
         # data 为解压并解析后的字典数据
         self.data = self.xmltodict(
             zip.read(self.xml_name))
+        zip.close()
         self.parse()
 
     def parse(self):

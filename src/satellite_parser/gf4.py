@@ -41,6 +41,7 @@ class GF4Satellite(BaseSatellite):
         # data 为解压并解析后的字典数据
         self.data = self.xmltodict(
             tar.extractfile(member_xml).read())
+        tar.close()
         self.parse()
 
     def parse(self):
