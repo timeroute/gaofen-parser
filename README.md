@@ -98,3 +98,4 @@ except Exception as e:
 - v0.2 新增高景卫星处理类
 - v0.2.3 卫星处理类新增两个变量 image_name 和 xml_name
 - v0.2.4 修复bug，解析压缩包后执行 close
+- v0.2.5 修复bug，在压缩包 close 前读取或解析所有需要的文件内容
